@@ -190,8 +190,8 @@ Addresses using Google Maps's Geocoding API
 # Develop Location and Time Data Analysis
 
 The Python Notebook 
-[smarthop-challenge.ipynb](smarthop-challenge.ipynb) contains 
+[smarthop-challenge.ipynb](project-results\smarthop-challenge.ipynb) contains 
 the code with the analysis results.
 
 Final analysis results are also saved in the 
-[analysis_results.json](analysis_results.json) file.
+[analysis_results.json](project-results\analysis_results.json) file.
