@@ -1,0 +1,11 @@
+{
+  "_id": "66dbc3ad6822234696fbf558",
+  "pickup": {
+    "checked": true,
+    "total_time_sec": 1585.149
+  },
+  "delivery": {
+    "checked": true,
+    "total_time_sec": 9988.553
+  }
+}
