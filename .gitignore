@@ -1,0 +1,9 @@
+.scaffold-challenge
+.vscode
+_MACOSX
+*.zip
+ML_Working Session V2.pdf
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
