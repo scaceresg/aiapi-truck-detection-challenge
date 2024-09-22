@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "title": "BOL Pickup and Delivery Information",
+  "description": "A schema to collect pickup and delivery address information from a BOL",
+  "type": "object",
+  "properties": {
+    "pickup_address": {
+      "description": "Details of the pickup location",
+      "type": "object",
+      "properties": {
+        "street_address": {
+          "type": "string",
+          "example": "123 MAIN ST"
+        },
+        "city": {
+          "type": "string",
+          "example": "SAN FRANCISCO"
+        },
+        "state": {
+          "type": "string",
+          "example": "CA"
+        },
+        "zip": {
+          "type": "string", 
+          "pattern": "^[0-9]{5}$",
+          "example": "90210"
+        }
+      },
+      "required": ["street_address", "city", "state", "zip"]
+    },
+    "delivery_address": {
+      "description": "Details of the delivery location",
+      "type": "object",
+      "properties": {
+        "street_address": {
+          "type": "string",
+          "example": "123 MAIN ST"
+        },
+        "city": {
+          "type": "string",
+          "example": "SAN FRANCISCO"
+        },
+        "state": {
+          "type": "string",
+          "example": "CA"
+        },
+        "zip": {
+          "type": "string", 
+          "pattern": "^[0-9]{5}$",
+          "example": "90210"
+        }
+      },
+      "required": ["street_address", "city", "state", "zip"]
+    }
+  },
+  "required": ["pickup_address", "delivery_address"]
+}
