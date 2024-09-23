@@ -100,8 +100,6 @@ https://cloud.google.com/sdk/docs/install
   Your active configuration is: [sebastiancg]
   ```
 
-* Add `Service Account Token Creator` role to the Owner account
-
 * Create a bucket in Cloud Storage to place the converted image: 
   
   ```
@@ -113,6 +111,8 @@ https://cloud.google.com/sdk/docs/install
   ```
   gs://data-extraction-vision/
   ```
+
+* Add `Service Account Token Creator` role to the Owner account
 
 * Create a Service Account with the `Service Account User` role:
   
@@ -139,19 +139,28 @@ https://cloud.google.com/sdk/docs/install
 * Use the Owner account to impersonate the Service Account:
   
   ```
-  gcloud auth application-default login --impersonate-service-account [SERVICE_ACCT_EMAIL]
+  gcloud auth application-default login --impersonate-service-account vision-admin@angular-compass-421116.iam.gserviceaccount.com
   ```
 
 * Enable Google Cloud APIs:
   
-  - Cloud Vision API: https://cloud.google.com/vision?hl=en
+  - Gemini API: https://ai.google.dev/gemini-api/docs
   
   - Geodecoding API: https://developers.google.com/maps/documentation/geocoding/overview
 
   - Distance Matrix API: https://developers.google.com/maps/documentation/distance-matrix/overview
 
-* Create an API Key to access the Geodecoding and Distance 
-Matrix APIs
+* Create an API Keys:
+  
+  - To access Google Maps services: Geodecoding and Distance 
+  Matrix APIs: `'GOOGLE_CLOUD_API_KEY'`
+
+  - To access Gemini API: `'GOOGLE_AI_STUDIO_API_KEY'`
+
+  - To access OpenAI API: https://platform.openai.com/: 
+  `'OPENAI_API_KEY'`
+
+* Add these API key to your environment variables
 
 # Challenge Steps
 
@@ -161,37 +170,40 @@ Matrix APIs
 
 3. Load GPS data using `json` dependency
 
-4. Define how to get location (lat, long) and date data from 
-GPS data
+  * Define how to get location (lat, long) and date data from 
+  GPS data
 
-5. Define how to get the distance between locations 
+4. Define how to get the distances between two locations 
    
-   * Using Google Maps's Distance Matrix API
+  * Option A: Using Google Maps's Distance Matrix API
    
-   * Using the `geopy` Dependency
+  * Option B: Using the `geopy` Dependency (used)
 
-6. Convert BOL file from `.pdf` to `.jpg` format 
+5. Extract Pickup and Delivery addresses from BOL
 
-7. Obtain location values for Pickup and Delivery addresses
-   
-   * Extract Text from Image using Google's Cloud Vision API
-   
-   * Get Pickup and Delivery Addresses
+  * Convert BOL file from `.pdf` to `.jpg` format 
+  
+  * Extract Addresses from Image/PDF file:
 
-8. Get Latitude, Longitude Values for Pickup and Delivery 
-Addresses using Google Maps's Geocoding API
+    - Option A: Use **OpenAI API**
+    
+    - Option B: Use **Google's Gemini API**
 
-9.  Check if Trucks passed near Pickup and Delivery points
+6. Obtain Pickup and Delivery coordinates using Google Maps's
+Geodecoding API
 
-10. Check the time Trucks stayed at Pickup and Delivery points
+7. Check if Trucks passed near Pickup and Delivery points
 
-11. Analysis Results
+8. Check the time Trucks stayed at Pickup and Delivery points
+
+9. Present Analysis Results
 
 # Develop Location and Time Data Analysis
 
 The Python Notebook 
-[smarthop-challenge.ipynb](project-results/smarthop-challenge.ipynb) contains 
-the code with the analysis results.
+[smarthop-challenge.ipynb](project-results/smarthop-challenge.ipynb) 
+contains the code with the analysis results.
 
 Final analysis results are also saved in the 
-[analysis_results.json](project-results/analysis_results.json) file.
+[analysis_results.json](project-results/analysis_results.json) 
+file.
