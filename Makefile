@@ -1,6 +1,3 @@
 install:
 	python -m pip install --upgrade pip
-	pip install -r requirements.txt
-	pip install --upgrade google-cloud-vision
-	pip install -U googlemaps
-	pip install --upgrade google-cloud-documentai
+	pip install --upgrade -r requirements.txt

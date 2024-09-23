@@ -1,3 +1,5 @@
 pdf2image
 geopy
 openai
+googlemaps
+google-generativeai
