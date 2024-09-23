@@ -170,33 +170,33 @@ https://cloud.google.com/sdk/docs/install
 
 3. Load GPS data using `json` dependency
 
-  * Define how to get location (lat, long) and date data from 
-  GPS data
+     * Define how to get location (lat, long) and date data from 
+     GPS data
 
 4. Define how to get the distances between two locations 
    
-  * Option A: Using Google Maps's Distance Matrix API
-   
-  * Option B: Using the `geopy` Dependency (used)
+     * Option A: Using Google Maps's Distance Matrix API
+      
+     * Option B: Using the `geopy` Dependency (used)
 
 5. Extract Pickup and Delivery addresses from BOL
 
-  * Convert BOL file from `.pdf` to `.jpg` format 
-  
-  * Extract Addresses from Image/PDF file:
+     * Convert BOL file from `.pdf` to `.jpg` format 
+     
+     * Extract Addresses from Image/PDF file:
 
-    - Option A: Use **OpenAI API**
-    
-    - Option B: Use **Google's Gemini API**
+       - Option A: Use **OpenAI API**
+       
+       - Option B: Use **Google's Gemini API**
 
 6. Obtain Pickup and Delivery coordinates using Google Maps's
 Geodecoding API
 
-7. Check if Trucks passed near Pickup and Delivery points
+1. Check if Trucks passed near Pickup and Delivery points
 
-8. Check the time Trucks stayed at Pickup and Delivery points
+2. Check the time Trucks stayed at Pickup and Delivery points
 
-9. Present Analysis Results
+3. Present Analysis Results
 
 # Develop Location and Time Data Analysis
 
