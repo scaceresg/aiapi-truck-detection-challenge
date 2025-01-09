@@ -2,7 +2,7 @@
 
 **Contents**:
 
-- [Smarthop Challenge](#smarthop-challenge)
+- [Truck Detection Challenge](#truck-detection-challenge)
   - [Input](#input)
   - [Goal](#goal)
   - [Expected Output](#expected-output)
