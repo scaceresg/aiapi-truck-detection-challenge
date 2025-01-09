@@ -1,4 +1,4 @@
-# Smarthop Challenge
+# Truck Detection Challenge
 
 **Contents**:
 
